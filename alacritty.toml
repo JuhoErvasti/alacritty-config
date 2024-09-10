@@ -18,13 +18,13 @@
 # I put the file alacritty.toml in $HOME/.config/alacritty. However it can be kept anywhere among the places mentioned in
 # https://github.com/alacritty/alacritty/tree/master#configuration
 
-# [shell]
-#
-# program = "cmd.exe"
-
 import = [
     "~/.config/alacritty/themes/themes/afterglow.toml"
 ]
+
+# [shell]
+#
+# program = "cmd.exe"
 
 [window]
 
