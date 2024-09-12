@@ -52,7 +52,7 @@ startup_mode = "Windowed"  # Default: "Windowed"
 title = "Terminal"  # Default: "Alacritty"
 
 # Dynamic title
-dynamic_title = true  # Default: true
+dynamic_title = false  # Default: true
 
 # Decorations theme variant
 decorations_theme_variant = "None"  # Default: "None"
