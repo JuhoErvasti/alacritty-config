@@ -6,29 +6,29 @@ def main() -> None:
     try:
         value = sys.argv[1]
     except IndexError:
-        print("ERROR: No opacity value given")
+        print("ERROR: No font_size value given")
         return
 
     try:
-        num_value: int = int(value)
+        num_value: float = float(value)
     except Exception:
-        print(f"ERROR: Could not convert {value} into a int!")
+        print(f"ERROR: Could not convert {value} into a float!")
         return
 
-    if num_value < 0:
-        print("ERROR: Opacity can't be below zero!")
+    if num_value < 6:
+        print("ERROR: Font size can't be below 6!")
         return
 
-    if num_value > 100:
-        print("ERROR: Opacity can't be above 100%!")
+    if num_value > 24:
+        print("ERROR: Font size can't be above 24")
         return
 
     lines: list[str] = []
     with open("alacritty.toml", "r") as file:
         lines = file.read().splitlines(True)
         for i, line in enumerate(lines):
-            if "opacity = " in line:
-                lines[i] = f"opacity = {float(num_value / 100)}\n"
+            if "size = " in line:
+                lines[i] = f"size = {num_value}\n"
 
     with open("alacritty.toml", "w") as file:
         file.writelines(lines)
