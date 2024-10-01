@@ -28,7 +28,7 @@ import = [
 
 [window]
 
-opacity = 0.9
+opacity = 0.85
 
 # Window dimensions
 dimensions = { columns = 0, lines = 0 }  # Default: columns = 0, lines = 0
