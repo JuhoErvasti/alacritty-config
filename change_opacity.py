@@ -15,6 +15,14 @@ def main() -> None:
         print(f"ERROR: Could not convert {value} into a float!")
         return
 
+    if num_value < 0:
+        print("ERROR: Opacity can't be below zero!")
+        return
+
+    if num_value > 100:
+        print("ERROR: Opacity can't be above 100%!")
+        return
+
     lines: list[str] = []
     with open("alacritty.toml", "r") as file:
         lines = file.read().splitlines(True)
